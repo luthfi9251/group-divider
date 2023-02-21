@@ -1,0 +1,29 @@
+.container{
+    background-color: white;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+}
+
+.header{
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+
+.groupname{
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.container ul{
+    list-style: none;
+    margin: 0.5rem 0;
+}
+
+.container ul li{
+    margin: 0.5rem;
+    line-height: 1rem;
+    font-weight: 600;
+}

@@ -1,0 +1,155 @@
+.app{
+    width: 100vw;
+    height: 100svh;
+    background-color: #B9F3E4;
+    display: grid;
+    grid-template-columns: 33% 33% 34%;
+    grid-template-rows: 80px auto;
+    grid-template-areas: 
+        "header header header"
+        "form form content";
+    overflow: hidden;
+}
+
+.header{
+    background-color: #A6DCCE;
+    grid-area: header;
+    width: 100%;
+    padding: 1rem 0;
+    font-weight: 900;
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(48, 46, 46);
+}
+
+.form{
+    grid-area: form;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.formItem{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 80%;
+    gap: 0.5rem;
+    border-radius: 10px;
+    background: #B9F3E4;
+    box-shadow:  27px 27px 55px #9dcfc2,
+             -27px -27px 55px #d5ffff;
+}
+
+.label{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.textarea{
+    padding: 0.7rem;
+    resize: none;
+    border: none;
+    border-radius: 7px;
+}
+
+.textarea:focus{
+    outline: none;
+}
+
+.info{
+    font-size: 0.8rem;
+    font-weight: 300;
+    user-select: none;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.input{
+    height: 2rem;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    padding: 0 0.5rem;
+}
+
+.divide{
+    background-color: #8bb3a8;
+    width: 150px;
+    padding: 0.5rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 7px;
+}
+
+.divide:hover{
+    background-color: white;
+    color: #8bb3a8;
+    cursor: pointer;
+}
+
+.content{
+    grid-area: content;
+    background-color: #B3E7D9;
+    width: 100%;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: scroll;
+}
+
+.summary{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+    .app{
+        width: 100vw;
+        min-height: 100svh;
+        height: auto;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 80px auto;
+        grid-template-areas: 
+            "header"
+            "form"
+            "content";
+        
+    }
+
+    .form{
+        padding: 0.5rem;
+    }
+
+    .formItem{
+        width: 100%;
+    }
+    .wrapper{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .content{
+        grid-area: content;
+        background-color: #B3E7D9;
+        width: 100%;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+  }
